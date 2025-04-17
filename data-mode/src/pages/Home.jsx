@@ -1,16 +1,12 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React from 'react'
+import Cart from '../companents/Cart'
 
 const Home = () => {
-  const [data, setData] = useState([]);
+  return (
+    <div>
+      <Cart/>
+    </div>
+  )
+}
 
-  const getData =()=> {
-    axios.get('')
-    
-  }
-
-  
-  return <div></div>;
-};
-
-export default Home;
+export default Home

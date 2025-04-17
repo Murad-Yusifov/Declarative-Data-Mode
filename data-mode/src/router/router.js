@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Layout from "../companents/Layout";
 import Basket from "../pages/Basket";
 import NotFound from "../companents/NotFound";
+import Wish from "../pages/Wish";
 
 export const router = createBrowserRouter([
     {
@@ -15,6 +16,9 @@ export const router = createBrowserRouter([
             },{
                 path:'/basket',
                 Component: Basket
+            },{
+                path: '/wish',
+                Component: Wish
             }
         ]},
         {

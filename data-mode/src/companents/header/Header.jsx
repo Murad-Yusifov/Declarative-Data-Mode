@@ -1,16 +1,31 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router'
 import styles from './Header.module.css'
 import { FaCartArrowDown, FaHeart, FaHome } from 'react-icons/fa'
 
 const Header = () => {
-  // const location =useNavigate()
+ const [count, setCount]=useState(1)
+ const [wish, setWish]=useState(1)
 
-  // const pageConfig = {
-  //   '/': {
-      
-  //   }
-  // }
+ const getCount =()=>{
+ let number = JSON.parse(localStorage.getItem('cart')) ||[]
+ let allNumbers =number.reduce((acc, item)=>acc +(item.count || 1), 0)
+ setCount(allNumbers)
+ 
+ }
+
+ const getWish =()=>{
+  let number = JSON.parse(localStorage.getItem('wish')) ||[]
+  let allNumbers =number.reduce((acc, item)=>acc +(item.count || 1), 0)
+  setWish(allNumbers)
+  
+  }
+
+ useEffect(()=>{
+  getCount()
+  getWish()
+ })
+ window.addEventListener('storage', getCount)
   return (
     <div>
         <header className={styles.header}>
@@ -18,8 +33,8 @@ const Header = () => {
         <nav>
          <ul>
          <li><Link className={styles.link} to='/'><FaHome className={styles.icons}/>Home</Link></li>
-          <li><Link className={styles.link} to='/basket'><FaCartArrowDown className={styles.icons}/>Basket</Link></li>
-          <li><Link className={styles.link} to='/wish'><FaHeart className={styles.icons}/>Wish</Link></li>
+          <li><Link className={styles.link} to='/basket'><FaCartArrowDown className={styles.icons}/>Basket ({count})</Link></li>
+          <li><Link className={styles.link} to='/wish'><FaHeart className={styles.icons}/>({wish}) Wish</Link></li>
          </ul>
         </nav>
         </header>

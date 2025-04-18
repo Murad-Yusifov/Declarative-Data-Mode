@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+nav {
+    width: 45%;
+}
+
+
+ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+li {
+    width: 60%;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    width: 160px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+
+transition: ease-in-out 0.4s;
+
+}
+
+.link:hover {
+    color: blueviolet;
+}
+
+
+.icons {
+    font-size: 20px;
+
+   
+}

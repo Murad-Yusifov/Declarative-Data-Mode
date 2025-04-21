@@ -1,0 +1,38 @@
+@import "../../styles/global.scss";
+
+.section1 {
+  width: $main-w;
+  height: $main-h;
+  @include centered-row($jc:center);
+
+  .text {
+    width: 40%;
+    height: 20%;
+    span {
+      font-size: 50px;
+      font-weight: bold;
+      color: $main-c;
+      padding-bottom: 20px;
+    }
+    .elit {
+      font-size: 25px;
+      color: black;
+
+    }
+    p {
+      width: 70%;
+      color: rgba(0, 0, 0, 0.39);
+      padding-bottom: 20px;
+
+    }
+  }
+
+  .img {
+    width: 45%;
+    height: 300px;
+    img {
+      width: $main-w;
+      height: 100%;
+    }
+  }
+}

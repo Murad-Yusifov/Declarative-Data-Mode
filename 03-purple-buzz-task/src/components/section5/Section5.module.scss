@@ -1,0 +1,15 @@
+@import "../../styles/global.scss";
+
+.section5 {
+    @include centered-row($jc:center);
+    .container {
+         height: 120vh;
+    
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 60px;
+     justify-content: center;
+     align-items: center;
+    
+    }
+}

@@ -1,0 +1,18 @@
+@mixin centered-row($jc:space-between) {
+    display: flex;
+    align-items: center;
+    justify-content: $jc;
+}
+
+@mixin centered-column($jc: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+
+}
+
+@mixin bg-img($bg:$section1-img) {
+    background-image: $bg;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

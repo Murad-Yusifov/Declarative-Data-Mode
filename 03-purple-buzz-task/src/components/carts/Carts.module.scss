@@ -1,0 +1,34 @@
+@import "../../styles/global.scss";
+.cart1 {
+    position: relative;
+    width: 220px;
+    height: 45%;
+    border-radius: 15px;
+    background-size: cover;  
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    @include centered-column($jc:end);
+    flex: 0 0 calc((100% - 3 * 16px) / 4);
+    gap: 10px;
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5); 
+      z-index: 1;                       
+    }
+  
+    & > * {
+      position: relative;
+      z-index: 2;
+      color: #fff;  
+    }
+    
+  p {
+    width: 70%;
+    color: white;
+    padding-bottom: 10px;
+  }
+}

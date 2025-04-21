@@ -1,0 +1,17 @@
+@import "../../styles/global.scss";
+
+.btn {
+    border: 1.5px solid white;
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $main-c;
+        color: rgba(255, 255, 255, 0.644);
+    }
+}

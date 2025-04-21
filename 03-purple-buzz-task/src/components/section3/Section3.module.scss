@@ -1,0 +1,19 @@
+@import "../../styles/global.scss";
+
+.section3 {
+    width: $main-w;
+    height: $main-h;
+    display: flex;
+    justify-content: center;
+  .container {
+    width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+   flex-wrap: wrap;
+   gap: 2.33px;
+
+  }
+
+}

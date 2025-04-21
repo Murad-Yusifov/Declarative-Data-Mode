@@ -1,0 +1,90 @@
+@import "../../styles/global.scss";
+
+footer {
+    width: $main-w;
+    background-color: $main-c;
+    height: 70vh;
+    color: white;
+    @include centered-column($jc:space-between);
+    align-items: center;
+
+
+.footer {
+    
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 20px;
+
+    .contain1 {
+        height: 30%;
+        @include centered-column($jc:space-between);
+        gap: 15px;
+
+        .icons {
+            width: 50%;
+            font-size:  25px;
+            @include centered-row;
+            cursor: pointer;
+
+        }
+
+        .buzz {
+            font-size:  30px;
+
+        }
+        
+        
+    }
+    .contain2 {
+        height: 30%;
+        @include centered-column($jc:space-between);
+        gap: 15px;
+        .buzz {
+            font-size:  30px;
+            
+        }
+    }
+    .contain3 {
+        height: 40%;
+        @include centered-column($jc:space-between);
+        gap: 15px;
+        .buzz {
+            font-size:  30px;
+            
+        }
+    }
+    
+    .contain4 {
+        height: 20%;
+        @include centered-column($jc:space-between);
+        gap: 15px;
+        .buzz {
+            font-size:  30px;
+            
+        }
+    }
+
+    
+}
+.under {
+    width: $main-w;
+    height: 70px;
+    font-size: 18px;
+    background-color: #4232C2;
+    @include centered-row;
+    padding: 0 30px;
+}
+}
+
+@media screen and (min-width:300px) and (max-width:576px) {
+    footer {
+        width: 100%;
+        .footer {
+            .buzz {
+                font-size: 15px;
+            }
+        }
+    }
+    
+}

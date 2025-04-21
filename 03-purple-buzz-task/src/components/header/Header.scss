@@ -1,0 +1,158 @@
+@import "../../styles/global.scss";
+
+nav {
+  width: $main-w;
+  height: 90px;
+  background-color: white;
+  @include centered-row($jc: center);
+  box-shadow: 0px 1px 15px gray;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  .container {
+    width: 90%;
+    font-size: 20px;
+    @include centered-row;
+
+    .logo {
+      width: 30%;
+      font-size: 30px;
+      .buzz {
+        color: $main-c;
+      }
+    }
+
+    ul {
+      width: 65%;
+      list-style: none;
+      @include centered-row;
+
+      li {
+        width: 30%;
+        font-size: 20px;
+        .link {
+          @include centered-row($jc: center);
+          width: 80px;
+          height: 40px;
+          text-align: center;
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            background-color: $main-c;
+            color: white;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+
+    .icon {
+      width: 15%;
+      @include centered-row;
+
+      .icons {
+        font-size: 25px;
+        color: $main-c;
+        cursor: pointer;
+      }
+    }
+
+    .menuContainer {
+      display: none;
+      font-size: 35px;
+      color: rgba(0, 0, 0, 0.421);
+      cursor: pointer;
+
+      .menu-toggle {
+        &:hover {
+          outline: 2px solid rgba(128, 128, 128, 0.736);
+        }
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 1px 15px gray;
+        padding: 10px;
+        @include centered-column;
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li .link {
+            text-decoration: none;
+            color: black;
+            padding: 10px 0;
+
+            &:hover {
+              color: $main-c;
+            }
+          }
+        }
+      }
+
+      .menuContainer {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Responsive design for smaller screens */
+@media screen and (min-width: 300px) and (max-width: 996px) {
+  nav {
+    position: relative;
+    .container {
+      ul,
+      .icon {
+        display: none;
+      }
+
+      .menuContainer {
+        display: block;
+        
+        .menu {
+          display: none;
+        }
+        .menu-open {
+          @include centered-row;
+          height: 200px;
+          position: absolute;
+        top: 90px;
+          ul {
+           @include centered-column;
+
+           li{
+            @include centered-row($jc:center);
+            width: $main-w;
+            transition: ease-in-out 0.4s;
+           }
+           
+          li .link:hover {
+            width: $main-w;
+            color: white;
+           }
+           .icon-tab {
+            @include centered-row;
+            width: $main-w;
+            color: $main-c;
+            font-size: 25px;
+
+            .icons {
+              cursor: pointer;
+            }
+
+           }
+          }
+        }
+      }
+    }
+  }
+}
